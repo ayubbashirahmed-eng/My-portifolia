@@ -1,0 +1,33 @@
+ /* Custom styles and animations */
+.glass { 
+  background: rgba(255,255,255,0.06); 
+  backdrop-filter: blur(6px); 
+}
+
+.accent-gradient { 
+  background: linear-gradient(90deg,#7c3aed,#06b6d4); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent; 
+}
+
+@keyframes floaty { 
+  0% { transform: translateY(0);} 
+  50% { transform: translateY(-6px);} 
+  100% { transform: translateY(0);} 
+}
+.floaty { animation: floaty 6s ease-in-out infinite; }
+
+/* Buttons */
+.btn-primary { 
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-purple-600 to-cyan-400 text-white shadow hover:scale-105 transition-transform w-full sm:w-auto; 
+}
+.btn-outline { 
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md border border-gray-200 dark:border-gray-700 w-full sm:w-auto; 
+}
+.btn-glass { 
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md glass w-full sm:w-auto; 
+}
+
+/* Navigation */
+.nav-link { @apply text-sm hover:underline block; }
